@@ -291,25 +291,25 @@ document.getElementById("calcButton").addEventListener("click", (event) => {
         // Update comments and styles based on BMI score
         if (bmiscore <= 18) {
             document.getElementById("comment").innerText = "YOU ARE UNDERWEIGHT";
-            document.getElementById("comment1").innerHTML = `<a href="help.html">GET <br></a>
-                                    <a href="help.html">HELP!!!<br></a>`;
+            document.getElementById("comment1").innerHTML = `<a href="../help/help.html">GET <br></a>
+                                    <a href="../help/help.html">HELP!!!<br></a>`;
             root.style.setProperty('--previousShade', '#12aae1');
             root.style.setProperty('--fontRed', '#12aae1');
         } else if (bmiscore > 29) {
             document.getElementById("comment").innerText = "YOU ARE OBESE!!";
-            document.getElementById("comment1").innerHTML = `<a href="help.html">GET <br></a>
-                                    <a href="help.html">HELP!!!<br></a>`;
+            document.getElementById("comment1").innerHTML = `<a href="../help/help.html">GET <br></a>
+                                    <a href="../help/help.html">HELP!!!<br></a>`;
             root.style.setProperty('--previousShade', 'red');
         } else if (bmiscore > 18 && bmiscore < 25) {
             document.getElementById("comment").innerText = "YOU ARE NORMAL!!";
-            document.getElementById("comment1").innerHTML = `<a href="help.html">STAY <br></a>
-                                    <a href="help.html">HARD!!!<br></a>`;
+            document.getElementById("comment1").innerHTML = `<a href="../help/help.html">STAY <br></a>
+                                    <a href="../help/help.html">HARD!!!<br></a>`;
             root.style.setProperty('--previousShade', 'rgb(26, 177, 26)');
             root.style.setProperty('--fontRed', 'rgb(26, 177, 26)');
         } else if (bmiscore > 25 && bmiscore < 29) {
             document.getElementById("comment").innerText = "YOU ARE OVERWEIGHT!!";
-            document.getElementById("comment1").innerHTML = `<a href="help.html">NEED <br></a>
-                                    <a href="help.html">HELP?<br></a>`;
+            document.getElementById("comment1").innerHTML = `<a href="../help/help.html">NEED <br></a>
+                                    <a href="../help/help.html">HELP?<br></a>`;
             root.style.setProperty('--previousShade', '#dae41c');
             root.style.setProperty('--fontRed', '#dae41c');
         }
