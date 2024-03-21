@@ -1,0 +1,302 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+    /* making root variable so that they can be used again easily */
+:root {
+    --normal-box-shadow: 1px 0 1vmin .6vmin #292929;
+    --fontRed:red;
+    --fontUnderWeight: #12aae1;
+    --fontOverWeight: #dae41c;
+    --FontNormal:rgb(26, 177, 26);
+    
+   
+  }
+
+body{
+    background-color: black;
+    color: white;
+    font-family: 'Rubik',sans-serif;
+}
+
+
+                            /* navigation */
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: sticky;
+    top: 0px;
+    background-color: black;
+    
+}
+
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 1vmin 3vmin;
+    font-size:  2vmin;
+    text-decoration: none;
+    color: white;
+    
+}
+nav a{
+    text-decoration: none;
+    color: white;
+}
+nav ul li a:hover{
+     color: var(--fontRed); /*changed */
+    transition: .4s;
+    cursor: pointer;
+}
+
+.logo{
+    color: white;
+    font-size: 3vmin;
+    letter-spacing: .2vmin;
+    cursor: pointer;
+    font-weight: bold;
+   
+}
+
+.logo span{
+    color: var(--fontRed);
+}
+        /* FOR HEADER  */
+
+.header
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.header h2
+{
+    margin-top: 15vmin; 
+    text-align: center;
+    font-size: 8vmin;
+    color: red; 
+}
+
+.header h2 span
+{
+    font-size: 10vmin;
+}
+
+.header p
+{
+    margin-top: 4rem;
+    text-align: center;
+    width: 40rem;
+    font-size: 1.4rem; 
+}
+
+.mainContainer
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+    margin-top: 10rem;
+
+}
+#UNDERWEIGHT
+{
+    width: 25rem;
+    height: 25rem;
+    box-shadow: 1px 0 1vmin .6vmin  var(--fontUnderWeight);
+}
+#OVERWEIGHT
+{
+    width: 25rem;
+    height: 25rem;
+    box-shadow: 1px 0 1vmin .6vmin var(--fontOverWeight);
+}
+#NORMAL
+{
+    width: 25rem;
+    height: 25rem;
+    box-shadow: 1px 0 1vmin .6vmin var(--FontNormal);
+}
+
+#OBESE
+{
+    width: 25rem;
+    height: 25rem;
+    box-shadow: 1px 0 1vmin .6vmin red;
+}
+
+#OBESE H3
+{
+    color: red;
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+
+#OVERWEIGHT h3
+{
+    color: var(--fontOverWeight);
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+#UNDERWEIGHT h3
+{
+    color: rgb(11, 155, 212);
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+#NORMAL h3
+{
+    color: var(--FontNormal);
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+
+#OVERWEIGHT h6
+{
+    color: var(--fontOverWeight);
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+#UNDERWEIGHT h6
+{
+    color: var(--fontUnderWeight);
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+#NORMAL h6
+{
+    color: var(--FontNormal);
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+#OBESE h6
+{
+    color: red;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+ .containers ul li 
+{
+    list-style-type: none;
+    font-size:  3vmin;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+#OBESE a
+{
+    text-decoration: none;
+    color: red;
+    color: white;
+}
+
+#NORMAL a
+{
+    text-decoration: none;
+    color: var(--FontNormal);
+}
+#UNDERWEIGHT a
+{
+    text-decoration: none;
+    color: var(--fontUnderWeight);
+}
+#OVERWEIGHT a
+{
+    text-decoration: none;
+    color: var(--fontOverWeight);
+}
+
+.containers ul
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 5rem;
+}
+.containers p
+{
+    text-align: center;
+    margin-top: 3rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    font-size: 1.2;
+    letter-spacing: 1px;
+
+}
+#NORMAL p
+{
+    color: var(--FontNormal);
+}
+#OVERWEIGHT p
+{
+    color: var(--fontOverWeight);
+}
+#OBESE p
+{
+    color: red;
+}
+#UNDERWEIGHT p
+{
+    color: var(--fontUnderWeight);
+}
+
+.containers li:hover
+
+{
+    transform: scale(1.3);
+}
+.containers:hover
+{
+    transform: scale(1.1);
+}
+.containers
+{
+    transition: transform 0.3s ease-in-out;
+}
+
+footer
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 7rem;
+    gap: 2rem;
+   
+    
+
+}
+footer svg
+{
+    transition: transform 0.3s ease;
+}
+
+footer a
+{
+    text-decoration: none;
+    color: white;
+}
+
+footer svg:hover
+{
+    
+    cursor: pointer;
+    transform: scale(1.2);
+    color: red;
+
+}
+

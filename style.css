@@ -1,0 +1,517 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+    /* making root variable so that they can be used again easily */
+:root {
+    --normal-box-shadow: 1px 0 1vmin .6vmin #292929;
+    --fontRed:red;
+    --fontF: #ff99cc;
+    --fontM: #8e44ad;
+    --fontUnderWeight: #12aae1;
+    --fontOverWeight: #dae41c;
+    --FontNormal:rgb(26, 177, 26);
+    --previousShade: #292929;
+  }
+
+body{
+    background-color: black;
+    color: white;
+    font-family: 'Rubik',sans-serif;
+}
+
+
+                            /* navigation */
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* position: sticky; */
+    top: 0px;
+    background-color: black;
+    
+}
+
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 1vmin 3vmin;
+    font-size:  2vmin;
+    text-decoration: none;
+    color: white;
+    
+}
+nav a{
+    text-decoration: none;
+    color: white;
+}
+nav ul li a:hover{
+     color: red; 
+    transition: .4s;
+    cursor: pointer;
+}
+
+.logo{
+    color: white;
+    font-size: 3vmin;
+    letter-spacing: .2vmin;
+    cursor: pointer;
+    font-weight: bold;
+   
+}
+
+.logo span{
+    color: red;
+}
+
+
+
+                         /* header font*/
+.header h2{
+    margin-top: 15vmin; 
+    text-align: center;
+    font-size: 8vmin;
+    background-image: linear-gradient(45deg, black, red,black) ; 
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+                        /* bmi calculaion box */
+.calc
+{
+    margin-top: 90px;
+    height:800px;
+    width: 620px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    background:#0e0d0d;
+    box-shadow: 1px 0 1vmin .6vmin var(--previousShade);
+    position: relative;
+    
+}
+
+                        /* gender */
+ .calc .gender{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+    margin-top: 3vmin;
+
+}
+.calc .gender div{
+    margin-top: 10px;
+    height: 100px;
+    width: 100px;
+    background: #141414;
+    box-shadow: var(--normal-box-shadow);
+    font-size: 80px;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.calc .gender .male.active span
+{
+    background-image: linear-gradient(45deg, #4d2177,#8e44ad) ;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    
+}
+
+.calc .gender .female.active span
+{
+    background-image: linear-gradient(45deg, #ff66cc, #ff99cc) ;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+                        /* height/weight */
+.calc .height,
+.calc .weight,
+.calc .age
+{
+    margin-top: 4vmin;
+   width: 75%;
+   height: 150px;
+   background-color: #141414;
+   box-shadow: var(--normal-box-shadow);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   font-size: 30px;
+   font-weight: bold;
+   color: white;
+}
+
+.calc .height .val,
+.calc .weight .val,
+.calc .age .val
+{
+    color: white;
+    font-size: 50px;
+    margin: 0;
+   
+}
+.calc .height .val i,
+.calc .weight .val i,
+.calc .age .val i
+
+{
+   text-align: center;
+   line-height: 40px;
+   font-size: 30px;
+   font-weight: bold;
+   padding: 3vmin;
+
+}
+.calc .height .val span,
+.calc .weight .val span,
+.calc .age .val span
+{
+        font-size: 40px;
+        font-weight: bold;
+        color: white;
+
+}
+
+
+                            /* //for input  */
+input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    input[type="number"] {
+        padding: 3px;
+        font-size: 40px;
+        width: 6rem;
+        height: 2.9rem;
+        background: #141414;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        border: 1px;
+        /* box-shadow: 0 .5vmin 1vmin .6vmin #292929; */
+        margin-top: 1rem;
+
+    }
+                            /* input ends */
+
+   
+                            /*another input type */
+.calc .height .scroll input,
+.calc .weight .scroll input,
+.calc .age .scroll input
+{
+    -webkit-appearance: none;
+    width: 25rem;
+    background: #333;
+    border-radius:50px;
+    overflow: hidden;
+}
+.calc .height .scroll input::-webkit-slider-thumb,
+.calc .weight input::-webkit-slider-thumb,
+.calc .age input::-webkit-slider-thumb
+ {
+    -webkit-appearance: none;
+    height: 10px;
+    width: 10px;
+    background: linear-gradient(45deg, black, red);
+    box-shadow: -50vmin 0 0 50vmin Red;
+}
+.calc .height input:hover,
+.calc .weight input:hover,
+.calc .age input:hover,
+.add:hover,
+.sub:hover,
+.calc .height input::-webkit-slider-thumb:hover,
+.calc .weight input::-webkit-slider-thumb:hover
+
+{
+    cursor: pointer;
+}
+
+.male span:hover
+{
+    cursor: pointer;
+    background-image: linear-gradient(45deg, #4d2177,#8e44ad) ;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    transform: 1.5s;
+
+}
+
+.female span:hover
+{
+    background-image: linear-gradient(45deg, #ff66cc, #ff99cc) ;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    transform: .5s;
+    cursor: pointer;
+}
+
+.reset{
+    width: 1.5rem;
+    position: relative;
+    transition: transform 0.3 ease;
+
+}
+
+.reset:hover {
+    transform: scale(1.3);
+    cursor:pointer ;
+}
+
+                                /* for bmi submit button                           */
+#submit
+
+{
+    margin-top: 4vmin;
+    width: 25%;
+    height: 50px;
+    background-color: #141414;
+    box-shadow: var(--normal-box-shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: white; 
+    text-decoration: none;
+    border-radius: 20px;
+    padding: 5px;
+    margin-top: 7%;
+}
+
+
+#submit a{
+    color: red;
+    background: #141414;
+    text-decoration: none;
+    font-size: 20px;
+
+}
+
+
+
+.header .active
+{
+    display: none;
+}
+
+.copyright
+{
+    text-align: center;
+    margin-top: 10vmin;
+}
+
+
+
+                        /* for feet to inches  */
+
+                        /* toogle box */
+#myBox {
+    display: none;
+    position: absolute;
+    background-color: #141414;
+    border-radius: 10px;
+    width: 15rem;
+    height: 12rem;
+    text-align: center;
+    box-shadow:  1px 0 1vmin .6vmin #292929;
+    font-size: .6rem;
+    
+  }
+
+  #input-container
+  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #input-container input
+  
+  {
+    background-color: #141414;
+    width: 4rem;
+    height: 2rem;
+    font-size: 1rem;
+    border: 1px solid white;
+    border-radius: 12px;
+    text-align: center;
+    margin-top: 2rem;
+
+
+  }
+
+  #result1
+  {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1rem;
+  }
+
+  #input-container button,
+  #output-container button
+  {
+    background-color: #141414;
+    color: red;
+    padding: .5rem;
+    border-radius: 12px;
+    box-shadow:  1px 0 1vmin .6vmin #292929;
+    font-weight: bold;
+    margin-top: 2rem;
+
+
+  }
+  .box h1
+  {
+    margin-top:14px;
+    font-size: 1rem;
+  }
+
+  .close {
+    position: absolute;
+    top: 1px;
+    right: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    color: red; 
+    
+  }
+
+        /* info icon */
+  .info{
+    width: 1.5rem;
+    position: absolute;
+    right: 5.5rem;
+    top: 10.5rem;
+    display: none;
+
+}
+
+/* result box of height to inches */
+#output-container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    
+}
+
+footer
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+    gap: 2rem;
+   
+    
+
+}
+footer svg
+{
+    transition: transform 0.3s ease;
+}
+
+footer a
+{
+    text-decoration: none;
+    color: white;
+}
+
+footer svg:hover
+{
+    
+    cursor: pointer;
+    transform: scale(1.2);
+    color: red;
+
+}
+                /* result box */
+
+.result
+{
+    color: var(--fontRed);
+}
+.title
+{
+    margin-top: 5vmin; 
+    text-align: center;
+    font-size: 6vmin;
+    font-weight: bold;
+    color: var(--fontRed);
+}
+
+.bmi .value
+{
+    margin-top: 3vmin;
+    font-size: 10rem;
+    
+}
+
+.calc .text
+{
+    margin-top: 5vmin;
+    font-size: 6vmin;
+    font-weight: bold;
+}
+
+.buttons
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    width:3rem;
+    text-align: center;
+}
+
+.buttons a
+{
+    text-decoration: none;
+    color: var(--fontRed);
+    font-size: 1.3rem;
+    box-shadow: 1px 0 1vmin .6vmin #292929;
+    padding: 1rem;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+}
+.buttons :first-child
+{
+    margin-top: 5rem;
+}
+.goggins
+{
+    margin-top: 3rem;
+}
+.goggins a
+{
+    font-size: 5rem;
+    font-weight: bolder;
+    text-decoration: none;
+    color: var(--fontRed);
+}
+
+
+
+
+

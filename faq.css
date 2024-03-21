@@ -1,0 +1,181 @@
+:root {
+    --normal-box-shadow: 1px 0 1vmin .6vmin #292929;
+    --fontRed:red;
+    --fontF: #ff99cc;
+    --fontM: #8e44ad;
+  }
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    color: white;
+    font-family: 'Rubik',sans-serif;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: sticky;
+    top: 0px;
+    background-color: black;
+    
+}
+
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 1vmin 3vmin;
+    font-size:  2vmin;
+    text-decoration: none;
+    color: white;
+    
+}
+
+nav a
+{
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a:hover{
+    color: var(--fontRed); /*changed */
+   transition: .4s;
+   cursor: pointer;
+}
+
+.logo{
+   color: white;
+   font-size: 3vmin;
+   letter-spacing: .2vmin;
+   cursor: pointer;
+   font-weight: bold;
+  
+}
+
+.logo span{
+   color: var(--fontRed);
+}
+
+.title
+{
+    margin-top: 3rem;
+    font-size: 3rem;
+    font-weight: bold;
+    background-image: linear-gradient(45deg, black, var(--fontRed),black) ; 
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+section
+{
+    min-height: 100vh;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.faq
+{
+    max-width: 700px;
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid white;
+    cursor: pointer;
+}
+
+.question
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.question h3
+{
+    font-size: 1.8rem;
+    color: red;
+    letter-spacing: 1px;
+
+}
+.answer
+{
+    max-height: 0;
+    overflow: hidden;
+    letter-spacing: 1px;
+}
+
+.faq.active .answer
+{
+    max-height: 300px;
+}
+.answer p
+{
+    color: white;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+}
+.answer p:hover
+{
+    cursor: text;
+}
+.answer a
+{
+    text-decoration: none;
+    color: white;
+    font-size: 1.4rem;
+}
+
+.answer a:hover
+{
+    color: red;
+    cursor: pointer;
+}
+
+.faq.active svg
+{
+    transform: rotate(180deg);
+}
+
+footer
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+    gap: 2rem;
+   
+    
+
+}
+footer svg
+{
+    transition: transform 0.3s ease;
+}
+
+footer a
+{
+    text-decoration: none;
+    color: white;
+}
+
+footer svg:hover
+{
+    
+    cursor: pointer;
+    transform: scale(1.2);
+    color: red;
+
+}
+
+
