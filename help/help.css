@@ -27,7 +27,6 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    position: sticky;
     top: 0px;
     background-color: black;
     
@@ -196,6 +195,10 @@ nav ul li a:hover{
     font-size:  3vmin;
     text-align: center;
     transition: transform 0.3s ease-in-out;
+}
+.containers
+{
+    overflow: hidden;
 }
 
 #OBESE a

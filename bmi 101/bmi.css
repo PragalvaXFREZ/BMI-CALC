@@ -1,0 +1,194 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+  /* making root variable so that they can be used again easily */
+:root {
+  --normal-box-shadow: 1px 0 1vmin .6vmin #292929;
+  --fontRed:red;
+  --fontUnderWeight: #12aae1;
+  --fontOverWeight: #dae41c;
+  --FontNormal:rgb(26, 177, 26);
+  
+ 
+}
+
+body{
+  background-color: black;
+  color: white;
+  font-family: 'Rubik',sans-serif;
+}
+
+
+                          /* navigation */
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: sticky;
+  top: 0px;
+  background-color: black;
+  
+}
+
+nav ul li{
+  list-style-type: none;
+  display: inline-block;
+  padding: 1vmin 3vmin;
+  font-size:  2vmin;
+  text-decoration: none;
+  color: white;
+  
+}
+nav a{
+  text-decoration: none;
+  color: white;
+}
+nav ul li a:hover{
+   color: var(--fontRed); /*changed */
+  transition: .4s;
+  cursor: pointer;
+}
+
+.logo{
+  color: white;
+  font-size: 3vmin;
+  letter-spacing: .2vmin;
+  cursor: pointer;
+  font-weight: bold;
+ 
+}
+
+.logo span{
+  color: var(--fontRed);
+}
+
+.title
+{
+  text-align: center;
+  margin-top: 4rem;
+  font-size: 5rem;
+  color: red;
+}
+
+.questions
+{
+  
+  margin-left: 3rem;
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 90%;
+}
+
+.q
+{
+  font-size: 2rem;
+  color: red;
+  margin-top: 3rem;
+  
+}
+
+.intro
+{
+  
+  color: gray;
+  font-size: 3rem;
+}
+
+.a
+{
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  letter-spacing: 1px;
+  font-weight: lighter;
+}
+
+
+
+.container {
+    display: flex;
+  }
+  
+  .numbers
+  {
+    max-width: 40%;
+  }
+  
+  .numbers ul {
+    list-style-type: none;
+    font-size: 1rem;
+    font-weight: lighter;
+  }
+  .info
+  {
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+  }
+  
+  .numbers a {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+  }
+
+  .numbers a:hover
+  {
+    cursor: pointer;
+    color: red;
+    transition: .4s;
+  }
+  
+  .images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  .images img {
+    /* position: absolute; */
+    height: 30rem;
+    width: 20rem;
+    display: none;
+    margin-top: 0rem;
+    margin-left: 20rem;
+  }
+  
+  .images img:first-child {
+    display: none;
+  }
+
+
+  footer
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+    gap: 2rem;
+   
+    
+
+}
+footer svg
+{
+    transition: transform 0.3s ease;
+}
+
+footer a
+{
+    text-decoration: none;
+    color: white;
+}
+
+footer svg:hover
+{
+    
+    cursor: pointer;
+    transform: scale(1.2);
+    color: red;
+
+}
+  
