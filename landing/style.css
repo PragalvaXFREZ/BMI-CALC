@@ -1,102 +1,107 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-    /* making root variable so that they can be used again easily */
+/* making root variable so that they can be used again easily */
 :root {
     --normal-box-shadow: 1px 0 1vmin .6vmin #292929;
-    --fontRed:red;
+    --fontRed: red;
     --fontF: #ff99cc;
     --fontM: #8e44ad;
     --fontUnderWeight: #12aae1;
     --fontOverWeight: #dae41c;
-    --FontNormal:rgb(26, 177, 26);
+    --FontNormal: rgb(26, 177, 26);
     --previousShade: #292929;
-  }
+}
 
-body{
+body {
     background-color: black;
     color: white;
-    font-family: 'Rubik',sans-serif;
+    font-family: 'Rubik', sans-serif;
 }
 
 
-                            /* navigation */
-nav{
+/* navigation */
+nav {
     display: flex;
     align-items: center;
     justify-content: space-around;
     /* position: sticky; */
     top: 0px;
     background-color: black;
-    
+    max-width: 100vw;
+
 }
 
-nav ul li{
+nav ul li {
     list-style-type: none;
     display: inline-block;
     padding: 1vmin 3vmin;
-    font-size:  2vmin;
+    font-size: 2vmin;
     text-decoration: none;
     color: white;
-    
+
 }
-nav a{
+
+nav a {
     text-decoration: none;
     color: white;
 }
-nav ul li a:hover{
-     color: red; 
+
+nav ul li a:hover {
+    color: red;
     transition: .4s;
     cursor: pointer;
 }
 
-.logo{
+.logo {
     color: white;
     font-size: 3vmin;
     letter-spacing: .2vmin;
     cursor: pointer;
     font-weight: bold;
-   
+
 }
 
-.logo span{
+.logo span {
     color: red;
 }
 
 
 
-                         /* header font*/
-.header h2{
-    margin-top: 15vmin; 
+/* header font*/
+.header h2 {
+    margin-top: 15vmin;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     font-size: 8vmin;
-    background-image: linear-gradient(45deg, black, red,black) ; 
+    background-image: linear-gradient(45deg, black, red, black);
     background-clip: text;
     -webkit-text-fill-color: transparent;
 
 }
 
-                        /* bmi calculaion box */
-.calc
-{
+/* bmi calculaion box */
+.calc {
     margin-top: 90px;
-    height:800px;
+    height: 820px;
     width: 620px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: start;
-    background:#0e0d0d;
+    background: #0e0d0d;
     box-shadow: 1px 0 1vmin .6vmin var(--previousShade);
     position: relative;
-    
+
 }
 
-                        /* gender */
- .calc .gender{
+/* gender */
+.calc .gender {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -105,7 +110,8 @@ nav ul li a:hover{
     margin-top: 3vmin;
 
 }
-.calc .gender div{
+
+.calc .gender div {
     margin-top: 10px;
     height: 100px;
     width: 100px;
@@ -117,136 +123,129 @@ nav ul li a:hover{
 
 }
 
-.calc .gender .male.active span
-{
-    background-image: linear-gradient(45deg, #4d2177,#8e44ad) ;
+.calc .gender .male.active span {
+    background-image: linear-gradient(45deg, #4d2177, #8e44ad);
     background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
-    
+
 }
 
-.calc .gender .female.active span
-{
-    background-image: linear-gradient(45deg, #ff66cc, #ff99cc) ;
+.calc .gender .female.active span {
+    background-image: linear-gradient(45deg, #ff66cc, #ff99cc);
     background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
 }
 
-                        /* height/weight */
+/* height/weight */
 .calc .height,
 .calc .weight,
-.calc .age
-{
+.calc .age {
     margin-top: 4vmin;
-   width: 75%;
-   height: 150px;
-   background-color: #141414;
-   box-shadow: var(--normal-box-shadow);
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   font-size: 30px;
-   font-weight: bold;
-   color: white;
+    width: 70%;
+    height: 150px;
+    background-color: #141414;
+    box-shadow: var(--normal-box-shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
 }
 
 .calc .height .val,
 .calc .weight .val,
-.calc .age .val
-{
+.calc .age .val {
     color: white;
     font-size: 50px;
     margin: 0;
-   
+
 }
+
 .calc .height .val i,
 .calc .weight .val i,
-.calc .age .val i
-
-{
-   text-align: center;
-   line-height: 40px;
-   font-size: 30px;
-   font-weight: bold;
-   padding: 3vmin;
+.calc .age .val i {
+    text-align: center;
+    line-height: 40px;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 3vmin;
 
 }
+
 .calc .height .val span,
 .calc .weight .val span,
-.calc .age .val span
-{
-        font-size: 40px;
-        font-weight: bold;
-        color: white;
+.calc .age .val span {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
 
 }
 
 
-                            /* //for input  */
+/* //for input  */
 input[type="number"]::-webkit-inner-spin-button,
-    input[type="number"]::-webkit-outer-spin-button,
-    input[type="number"]::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-    }
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 
-    input[type="number"] {
-        padding: 3px;
-        font-size: 40px;
-        width: 6rem;
-        height: 2.9rem;
-        background: #141414;
-        text-align: center;
-        color: white;
-        font-weight: bold;
-        border: 1px;
-        /* box-shadow: 0 .5vmin 1vmin .6vmin #292929; */
-        margin-top: 1rem;
+input[type="number"] {
+    padding: 3px;
+    font-size: 40px;
+    width: 6rem;
+    height: 2.9rem;
+    background: #141414;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    border: 1px;
+    /* box-shadow: 0 .5vmin 1vmin .6vmin #292929; */
+    margin-top: 1rem;
 
-    }
-                            /* input ends */
+}
 
-   
-                            /*another input type */
+/* input ends */
+
+
+/*another input type */
 .calc .height .scroll input,
 .calc .weight .scroll input,
-.calc .age .scroll input
-{
+.calc .age .scroll input {
     -webkit-appearance: none;
     width: 25rem;
     background: #333;
-    border-radius:50px;
+    border-radius: 50px;
     overflow: hidden;
 }
+
 .calc .height .scroll input::-webkit-slider-thumb,
 .calc .weight input::-webkit-slider-thumb,
-.calc .age input::-webkit-slider-thumb
- {
+.calc .age input::-webkit-slider-thumb {
     -webkit-appearance: none;
     height: 10px;
     width: 10px;
     background: linear-gradient(45deg, black, red);
     box-shadow: -50vmin 0 0 50vmin Red;
 }
+
 .calc .height input:hover,
 .calc .weight input:hover,
 .calc .age input:hover,
 .add:hover,
 .sub:hover,
 .calc .height input::-webkit-slider-thumb:hover,
-.calc .weight input::-webkit-slider-thumb:hover
-
-{
+.calc .weight input::-webkit-slider-thumb:hover {
     cursor: pointer;
 }
 
-.male span:hover
-{
+.male span:hover {
     cursor: pointer;
-    background-image: linear-gradient(45deg, #4d2177,#8e44ad) ;
+    background-image: linear-gradient(45deg, #4d2177, #8e44ad);
     background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
@@ -254,9 +253,8 @@ input[type="number"]::-webkit-inner-spin-button,
 
 }
 
-.female span:hover
-{
-    background-image: linear-gradient(45deg, #ff66cc, #ff99cc) ;
+.female span:hover {
+    background-image: linear-gradient(45deg, #ff66cc, #ff99cc);
     background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
@@ -264,7 +262,7 @@ input[type="number"]::-webkit-inner-spin-button,
     cursor: pointer;
 }
 
-.reset{
+.reset {
     width: 1.5rem;
     position: relative;
     transition: transform 0.3 ease;
@@ -273,13 +271,11 @@ input[type="number"]::-webkit-inner-spin-button,
 
 .reset:hover {
     transform: scale(1.3);
-    cursor:pointer ;
+    cursor: pointer;
 }
 
-                                /* for bmi submit button                           */
-#submit
-
-{
+/* for bmi submit button  */
+#submit {
     margin-top: 4vmin;
     width: 25%;
     height: 50px;
@@ -291,7 +287,7 @@ input[type="number"]::-webkit-inner-spin-button,
     align-items: center;
     font-size: 30px;
     font-weight: bold;
-    color: white; 
+    color: white;
     text-decoration: none;
     border-radius: 20px;
     padding: 5px;
@@ -299,7 +295,7 @@ input[type="number"]::-webkit-inner-spin-button,
 }
 
 
-#submit a{
+#submit a {
     color: red;
     background: #141414;
     text-decoration: none;
@@ -309,22 +305,20 @@ input[type="number"]::-webkit-inner-spin-button,
 
 
 
-.header .active
-{
+.header .active {
     display: none;
 }
 
-.copyright
-{
+.copyright {
     text-align: center;
     margin-top: 10vmin;
 }
 
 
 
-                        /* for feet to inches  */
+/* for feet to inches  */
 
-                        /* toogle box */
+/* toogle box */
 #myBox {
     display: none;
     position: absolute;
@@ -333,20 +327,18 @@ input[type="number"]::-webkit-inner-spin-button,
     width: 15rem;
     height: 12rem;
     text-align: center;
-    box-shadow:  1px 0 1vmin .6vmin #292929;
+    box-shadow: 1px 0 1vmin .6vmin #292929;
     font-size: .6rem;
-    
-  }
 
-  #input-container
-  {
+}
+
+#input-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  #input-container input
-  
-  {
+}
+
+#input-container input {
     background-color: #141414;
     width: 4rem;
     height: 2rem;
@@ -357,46 +349,44 @@ input[type="number"]::-webkit-inner-spin-button,
     margin-top: 2rem;
 
 
-  }
+}
 
-  #result1
-  {
+#result1 {
     text-align: center;
     margin-top: 2rem;
     font-size: 1rem;
-  }
+}
 
-  #input-container button,
-  #output-container button
-  {
+#input-container button,
+#output-container button {
     background-color: #141414;
     color: red;
     padding: .5rem;
     border-radius: 12px;
-    box-shadow:  1px 0 1vmin .6vmin #292929;
+    box-shadow: 1px 0 1vmin .6vmin #292929;
     font-weight: bold;
     margin-top: 2rem;
 
 
-  }
-  .box h1
-  {
-    margin-top:14px;
-    font-size: 1rem;
-  }
+}
 
-  .close {
+.box h1 {
+    margin-top: 14px;
+    font-size: 1rem;
+}
+
+.close {
     position: absolute;
     top: 1px;
     right: 5px;
     cursor: pointer;
     font-size: 20px;
-    color: red; 
-    
-  }
+    color: red;
 
-        /* info icon */
-  .info{
+}
+
+/* info icon */
+.info {
     width: 1.5rem;
     position: absolute;
     right: 5.5rem;
@@ -406,87 +396,79 @@ input[type="number"]::-webkit-inner-spin-button,
 }
 
 /* result box of height to inches */
-#output-container
-{
+#output-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    
+
 }
 
-footer
-{
+footer {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 3rem;
     gap: 2rem;
-   
-    
+
+
 
 }
-footer svg
-{
+
+footer svg {
     transition: transform 0.3s ease;
 }
 
-footer a
-{
+footer a {
     text-decoration: none;
     color: white;
 }
 
-footer svg:hover
-{
-    
+footer svg:hover {
+
     cursor: pointer;
     transform: scale(1.2);
     color: red;
 
 }
-                /* result box */
 
-.result
-{
+/* result box */
+
+.result {
     color: var(--fontRed);
 }
-.title
-{
-    margin-top: 5vmin; 
+
+.title {
+    margin-top: 5vmin;
     text-align: center;
     font-size: 6vmin;
     font-weight: bold;
     color: var(--fontRed);
 }
 
-.bmi .value
-{
+.bmi .value {
     margin-top: 3vmin;
     font-size: 10rem;
-    
+
 }
 
-.calc .text
-{
+.calc .text {
     margin-top: 5vmin;
     font-size: 6vmin;
     font-weight: bold;
 }
 
-.buttons
-{
+.buttons {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 4rem;
-    width:3rem;
+    width: 3rem;
     text-align: center;
 }
 
-.buttons a
-{
+.buttons a {
     text-decoration: none;
     color: var(--fontRed);
     font-size: 1.3rem;
@@ -495,23 +477,53 @@ footer svg:hover
     border-radius: 20px;
     margin-bottom: 1rem;
 }
-.buttons :first-child
-{
+
+.buttons :first-child {
     margin-top: 5rem;
 }
-.goggins
-{
+
+.goggins {
     margin-top: 3rem;
 }
-.goggins a
-{
+
+.goggins a {
     font-size: 5rem;
     font-weight: bolder;
     text-decoration: none;
     color: var(--fontRed);
 }
 
+@media screen and (max-width:741px) {
 
+    nav {
+        flex-wrap: wrap;
+        max-width: 100vw;
+    }
 
+    nav a {
+        font-size: 20px;
 
+    }
 
+    .calc {
+        max-width: 95vw;
+        height: 770px;
+
+    }
+
+    .calc .height .scroll input,
+    .calc .weight .scroll input,
+    .calc .age .scroll input {
+        max-width: 60vw;
+    }
+
+    .logo {
+        font-size: 30px;
+        margin-bottom: 32px;
+    }
+    #submit
+    {
+        width: 150px;
+    }
+
+}

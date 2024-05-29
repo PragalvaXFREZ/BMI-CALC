@@ -1,5 +1,5 @@
 
-let lastClickedIndex = -1; // Variable to keep track of the last clicked index
+let lastClickedIndex = -1; 
 
 document.addEventListener("DOMContentLoaded", function() {
   const images = document.querySelectorAll('.images img');
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
 function showImage(index) {
   const images = document.querySelectorAll('.images img');
   
-  // If lastClickedIndex is the same as the current index, hide the image
+  // hide the image
   if (lastClickedIndex === index) {
     images[index - 1].style.display = 'none';
     lastClickedIndex = -1; // Reset lastClickedIndex
