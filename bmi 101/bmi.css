@@ -1,81 +1,82 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-  /* making root variable so that they can be used again easily */
+/* making root variable so that they can be used again easily */
 :root {
   --normal-box-shadow: 1px 0 1vmin .6vmin #292929;
-  --fontRed:red;
+  --fontRed: red;
   --fontUnderWeight: #12aae1;
   --fontOverWeight: #dae41c;
-  --FontNormal:rgb(26, 177, 26);
-  
- 
+  --FontNormal: rgb(26, 177, 26);
+
+
 }
 
-body{
+body {
   background-color: black;
   color: white;
-  font-family: 'Rubik',sans-serif;
+  font-family: 'Rubik', sans-serif;
 }
 
 
-                          /* navigation */
-nav{
+/* navigation */
+nav {
   display: flex;
   align-items: center;
   justify-content: space-around;
   position: sticky;
   top: 0px;
   background-color: black;
-  
+
 }
 
-nav ul li{
+nav ul li {
   list-style-type: none;
   display: inline-block;
   padding: 1vmin 3vmin;
-  font-size:  2vmin;
+  font-size: 2vmin;
   text-decoration: none;
   color: white;
-  
+
 }
-nav a{
+
+nav a {
   text-decoration: none;
   color: white;
 }
-nav ul li a:hover{
-   color: var(--fontRed); /*changed */
+
+nav ul li a:hover {
+  color: var(--fontRed);
+  /*changed */
   transition: .4s;
   cursor: pointer;
 }
 
-.logo{
+.logo {
   color: white;
   font-size: 3vmin;
   letter-spacing: .2vmin;
   cursor: pointer;
   font-weight: bold;
- 
+
 }
 
-.logo span{
+.logo span {
   color: var(--fontRed);
 }
 
-.title
-{
+.title {
   text-align: center;
   margin-top: 4rem;
   font-size: 5rem;
   color: red;
 }
 
-.questions
-{
-  
+.questions {
+
   margin-left: 3rem;
   margin-top: 4rem;
   display: flex;
@@ -83,23 +84,20 @@ nav ul li a:hover{
   max-width: 90%;
 }
 
-.q
-{
+.q {
   font-size: 2rem;
   color: red;
   margin-top: 3rem;
-  
+
 }
 
-.intro
-{
-  
+.intro {
+
   color: gray;
   font-size: 3rem;
 }
 
-.a
-{
+.a {
   font-size: 1.5rem;
   margin-top: 1rem;
   letter-spacing: 1px;
@@ -109,21 +107,112 @@ nav ul li a:hover{
 
 
 .container {
-    display: flex;
+  display: flex;
+}
+
+.numbers {
+  max-width: 40%;
+}
+
+.numbers ul {
+  list-style-type: none;
+  font-size: 1rem;
+  font-weight: lighter;
+}
+
+.info {
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+.numbers a {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.numbers a:hover {
+  cursor: pointer;
+  color: red;
+  transition: .4s;
+}
+
+.images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.images img {
+  /* position: absolute; */
+  height: 30rem;
+  width: 20rem;
+  display: none;
+  margin-top: 0rem;
+  margin-left: 20rem;
+}
+
+.images img:first-child {
+  display: none;
+}
+
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+  gap: 2rem;
+
+
+
+}
+
+footer svg {
+  transition: transform 0.3s ease;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+footer svg:hover {
+
+  cursor: pointer;
+  transform: scale(1.2);
+  color: red;
+
+}
+
+@media screen and (max-width:709px) {
+
+  nav {
+    flex-direction: column;
+    max-width: 100vw;
+    margin: auto;
+  }
+
+  nav a {
+    font-size: 20px;
+  }
+
+  .logo {
+    font-size: 30px;
+    margin: auto;
   }
   
-  .numbers
-  {
-    max-width: 40%;
+  .numbers {
+    max-width: 100%;
   }
   
   .numbers ul {
     list-style-type: none;
-    font-size: 1rem;
+    font-size: 22px;
     font-weight: lighter;
   }
-  .info
-  {
+  
+  .info {
     margin-bottom: 2rem;
     margin-top: 1rem;
   }
@@ -132,9 +221,8 @@ nav ul li a:hover{
     margin-bottom: 10px;
     font-size: 1.5rem;
   }
-
-  .numbers a:hover
-  {
+  
+  .numbers a:hover {
     cursor: pointer;
     color: red;
     transition: .4s;
@@ -142,9 +230,7 @@ nav ul li a:hover{
   
   .images {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    
+  
   }
   
   .images img {
@@ -153,42 +239,13 @@ nav ul li a:hover{
     width: 20rem;
     display: none;
     margin-top: 0rem;
-    margin-left: 20rem;
+   
   }
   
   .images img:first-child {
     display: none;
   }
-
-
-  footer
-{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 3rem;
-    gap: 2rem;
-   
-    
-
-}
-footer svg
-{
-    transition: transform 0.3s ease;
-}
-
-footer a
-{
-    text-decoration: none;
-    color: white;
-}
-
-footer svg:hover
-{
-    
-    cursor: pointer;
-    transform: scale(1.2);
-    color: red;
-
-}
   
+
+}
+

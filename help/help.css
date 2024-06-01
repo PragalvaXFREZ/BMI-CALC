@@ -96,6 +96,7 @@ nav ul li a:hover{
 .mainContainer
 {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 6rem;
@@ -303,3 +304,36 @@ footer svg:hover
 
 }
 
+@media screen and (max-width:910px)
+{
+.mainContainer
+{
+    flex-direction: column;
+}
+}
+
+@media screen and (max-width:709px) {
+
+    nav {
+        flex-direction: column;
+        max-width: 100vw;
+    }
+
+    nav a {
+        font-size: 20px;
+
+    }
+    .logo {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width:715px) 
+{
+    .header p
+    {
+        max-width: 100vw;
+    }
+    
+   
+}

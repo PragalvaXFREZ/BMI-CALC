@@ -389,7 +389,7 @@ input[type="number"] {
 .info {
     width: 1.5rem;
     position: absolute;
-    right: 5.5rem;
+    right: 6rem;
     top: 10.5rem;
     display: none;
 
@@ -493,10 +493,10 @@ footer svg:hover {
     color: var(--fontRed);
 }
 
-@media screen and (max-width:741px) {
+@media screen and (max-width:709px) {
 
     nav {
-        flex-wrap: wrap;
+        flex-direction: column;
         max-width: 100vw;
     }
 
@@ -504,26 +504,29 @@ footer svg:hover {
         font-size: 20px;
 
     }
-
+    .logo {
+        font-size: 30px;
+    }
     .calc {
         max-width: 95vw;
         height: 770px;
 
     }
-
     .calc .height .scroll input,
     .calc .weight .scroll input,
     .calc .age .scroll input {
         max-width: 60vw;
     }
 
-    .logo {
-        font-size: 30px;
-        margin-bottom: 32px;
-    }
     #submit
     {
         width: 150px;
+    }
+    .info {
+        width: 1.5rem;
+        position: absolute;
+        right: 5.5rem;
+        top: 10.5rem;
     }
 
 }
